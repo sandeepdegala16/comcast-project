@@ -1,0 +1,14 @@
+---
+- name: install nscd pkg
+  become: yes
+  yum: 
+    state: present
+    name: nscd
+
+- name: Clear the nscd cache 
+  become: yes
+  file: path=/var/db/nscd/passwd state=absent
+
+- name: Restart the nscd service
+  become: yes
+  service: name=nscd state=restarted

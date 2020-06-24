@@ -1,0 +1,10 @@
+---
+devops_users:
+  - username: degala
+    name: sandeep degala
+    groups: []
+    ssh_key: 
+      - "ssh-rsa "
+
+sudo_users:
+  - ops_dba
